@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://localhost:4321',
+  site: 'https://DorianGrey11.github.io',
+  base: 'kleinrath',
   integrations: [tailwind(), sitemap()]
 });
