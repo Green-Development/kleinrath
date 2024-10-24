@@ -1,0 +1,33 @@
+---
+const menuItems = [
+    {link: "/", label: "Startseite"},
+    {link: "/unser-buero", label: "Unser Büro"},
+    {link: "/leistungen", label: "Leistungen"},
+    {link: "/referenzen", label: "Referenzen"},
+    {link: "/kontakt", label: "Kontakt"},
+    {link: "/impressum", label: "Impressum"}
+]
+const url = Astro.url
+---
+<!-- Toggle button for small screens -->
+<button class="md:hidden block p-4" onclick="document.getElementById('nav-menu').classList.toggle('hidden')">
+    <svg class="w-screen h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
+
+<nav id="nav-menu"
+     class=" md:w-[250px] shadow w-screen text-center dark:text-gray-300 bg-gray-100 dark:bg-gray-800 p-5 box-border hidden md:block">
+    {
+        menuItems.map(({link, label}) => (
+                link == url.pathname ?
+                        <a href={link}
+                           class="block no-underline py-2 font-sans text-[16px] mb-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 ">{label}
+                        </a> :
+                        <a href={link}
+                           class="block no-underline py-2 font-sans text-[16px] mb-2 hover:bg-gray-300 dark:hover:bg-gray-600">{label}
+                        </a>
+            )
+        )
+    }
+</nav>
