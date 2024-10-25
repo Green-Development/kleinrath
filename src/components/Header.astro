@@ -3,7 +3,7 @@ import Picture from 'astro/components/Picture.astro';
 import emotionheader from '../assets/emotionheader.jpg';
 const {title = "kleinrath bauingenieure VBI"} = Astro.props;
 ---
-<div class="relative bg-gradient-to-t from-[#99a2b5] to-[#65738d] h-[30vh] flex justify-center items-center">
+<div class="relative w-screen bg-gradient-to-t from-[#99a2b5] to-[#65738d] h-[30vh] flex justify-center items-center overflow-hidden">
     <Picture src={emotionheader}
              class="w-[80rem] min-w-[80rem] max-h-52 h-[30vh] pr-6"
              alt="Ruler on blueprint"
