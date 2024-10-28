@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://doriangrey11.github.io',
+  site: 'https://green-development.github.io',
   base: 'kleinrath',
   integrations: [tailwind(), sitemap()]
 });
