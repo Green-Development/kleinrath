@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: localhost:4321/sitemap.xml
+Sitemap: https://green-development.github.io/sitemap.xml
