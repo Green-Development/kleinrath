@@ -9,6 +9,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://green-development.github.io',
   base: 'kleinrath',
-  trailingSlash: "never",
   integrations: [tailwind(), sitemap()]
 });
