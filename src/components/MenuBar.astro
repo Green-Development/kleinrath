@@ -10,8 +10,13 @@ const menuItems = [
 const {currentPath} = Astro.props;
 ---
 <!-- Toggle button for small screens -->
-<button class="md:hidden block p-4" onclick="document.getElementById('nav-menu').classList.toggle('hidden')">
-    <svg class="w-screen h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<button class="md:hidden block p-4" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu"
+        onclick="
+        document.getElementById('nav-menu').classList.toggle('hidden');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        ">
+    <svg class="w-screen h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
     </svg>
 </button>
