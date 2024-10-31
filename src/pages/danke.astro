@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout title="kleinrath bauingenieure VBI - Danke für Ihre Nachricht">
+    <div class="max-w-md mx-auto mt-6 p-8 text-center">
+        <h2 class="text-2xl font-bold mb-4">Vielen Dank für Ihre Nachricht</h2>
+
+        <p class="text-lg mb-6">
+            Wir haben Ihre Nachricht erhalten und werden diese umgehend bearbeiten.
+        </p>
+
+        <a
+            href={import.meta.env.BASE_URL}
+            class="inline-block font-semibold px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-500"
+        >
+            Zurück zur Startseite
+        </a>
+    </div>
+</MainLayout>

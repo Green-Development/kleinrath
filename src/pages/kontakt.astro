@@ -1,19 +1,26 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
 ---
 <MainLayout title="kleinrath bauingenieure VBI - Kontakt">
-  <h2 class="text-xl font-bold mb-4">Unsere Kontaktdaten</h2>
+    <h2 class="text-xl font-bold mb-4">Unsere Kontaktdaten</h2>
 
-  <p class="mb-4">Wir freuen uns, gemeinsam mit Ihnen Ihre Projekte zu realisieren. Treten Sie mit uns in Kontakt unter:</p>
+    <p class="mb-4">Wir freuen uns, gemeinsam mit Ihnen Ihre Projekte zu realisieren. Treten Sie noch heute mit uns in
+        Kontakt über
+        unser Kontaktformular oder unter:</p>
 
-  <div class="mb-4">
-    <p><strong>kleinrath bauingenieure VBI</strong></p>
-    <p>Bruckertalstrasse 41</p>
-    <p>73527 Schwäbisch Gmünd</p>
-  </div>
-
-  <div>
-    <p><strong>Telefon:</strong> <a href="tel:+4971719718613" class="text-blue-500 hover:underline">+49 7171 97 18 613</a></p>
-    <p><strong>E-Mail:</strong> <a href="mailto:info@kleinrath.de" class="text-blue-500 hover:underline">info@kleinrath.de</a></p>
-  </div>
+    <div class="mb-4">
+        <p><strong>kleinrath bauingenieure VBI</strong></p>
+        <p>Bruckertalstrasse 41</p>
+        <p>73527 Schwäbisch Gmünd</p>
+    </div>
+    <div class="mb-4">
+        <p><strong>Telefon:</strong> <a href="tel:+4971719718613"
+                                        class="text-blue-600 dark:text-blue-950 hover:underline">+49 7171 97 18 613</a>
+        </p>
+        <p><strong>E-Mail:</strong> <a href="mailto:info@kleinrath.de"
+                                       class="text-blue-600 dark:text-blue-950 hover:underline">info@kleinrath.de</a>
+        </p>
+    </div>
+    <ContactForm/>
 </MainLayout>
