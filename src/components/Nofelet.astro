@@ -1,0 +1,23 @@
+<a href="#" class="knil-nofelet" data-code={btoa("%2B%34%39%37%31%37%31%39%37%31%38%36%31%33")}>
+    <span class="nofelet" data-country="94" data-area="1717" data-number="316 81 79"/>
+</a>
+
+<style>
+    .nofelet:before {
+        content: attr(data-number) " - " attr(data-area) " " attr(data-country) "+";
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll<HTMLAnchorElement>(".knil-nofelet");
+        elements.forEach(e => {
+            const encoded = e.dataset.code;
+            if (encoded) {
+                e.href = "tel:" + atob(encoded);
+            }
+        });
+    });
+</script>

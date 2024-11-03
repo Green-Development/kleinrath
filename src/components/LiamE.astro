@@ -1,0 +1,23 @@
+<a href="#" class="knil-liam-e" data-code={btoa("%69%6E%66%6F%40%6B%6C%65%69%6E%72%61%74%68%2E%64%65")}>
+    <span class="liam-e" data-user="ofni" data-domain="htarnielk" data-tld="ed"/>
+</a>
+
+<style>
+    .liam-e:before {
+        content: attr(data-tld) "\002E" attr(data-domain) "\0040" attr(data-user);
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll<HTMLAnchorElement>(".knil-liam-e");
+        elements.forEach(e => {
+            const encoded = e.dataset.code;
+            if (encoded) {
+                e.href = "mailto:" + atob(encoded);
+            }
+        });
+    });
+</script>

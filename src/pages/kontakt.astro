@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
+import LiamE from "../components/LiamE.astro";
+import Nofelet from "../components/Nofelet.astro";
 ---
 <MainLayout title="kleinrath bauingenieure VBI - Kontakt">
     <h2 class="text-xl font-bold mb-4">Unsere Kontaktdaten</h2>
@@ -15,11 +17,9 @@ import ContactForm from "../components/ContactForm.astro";
         <p>73527 Schwäbisch Gmünd</p>
     </div>
     <div class="mb-4">
-        <p><strong>Telefon:</strong> <a href="tel:+4971719718613"
-                                        class="text-blue-600 dark:text-blue-950 hover:underline">+49 7171 97 18 613</a>
+        <p><strong>Telefon:</strong> <span class="text-blue-600 dark:text-blue-950 hover:underline"><Nofelet/></span>
         </p>
-        <p><strong>E-Mail:</strong> <a href="mailto:info@kleinrath.de"
-                                       class="text-blue-600 dark:text-blue-950 hover:underline">info@kleinrath.de</a>
+        <p><strong>E-Mail:</strong> <span class="text-blue-600 dark:text-blue-950 hover:underline"><LiamE/></span>
         </p>
     </div>
     <ContactForm/>
